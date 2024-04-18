@@ -1,0 +1,76 @@
+package com.yuanlrc.base.constant;
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * 系统运行时的常量
+ * @author Administrator
+ *
+ */
+public class RuntimeConstant {
+
+	//后台登录拦截器无需拦截的url
+	public static List<String> loginExcludePathPatterns = Arrays.asList(
+			"/home/**",
+			"/system/login",
+			"/admin/css/**",
+			"/admin/fonts/**",
+			"/cpacha/generate_cpacha",
+			"/admin/js/**",
+			"/admin/images/**",
+			"/error",
+			"/upload/upload_photo",
+			"/photo/view"
+	);
+	//后台权限拦截器无需拦截的url
+	public static List<String> authorityExcludePathPatterns = Arrays.asList(
+			"/home/**",
+			"/system/login",
+			"/system/auth_order",
+			"/system/index",
+			"/system/no_right",
+			"/admin/css/**",
+			"/admin/fonts/**",
+			"/admin/js/**",
+			"/admin/images/**",
+			"/error",
+			"/cpacha/generate_cpacha",
+			"/system/logout",
+			"/system/update_userinfo",
+			"/system/update_pwd",
+			"/upload/upload_photo",
+			"/photo/view"
+	);
+
+	//前台登录拦截器无需拦截的url
+	public static List<String> homeLoginExcludePathPatterns = Arrays.asList(
+			"/admin/**",
+			"/home/index/**",
+			"/system/auth_order",
+			"/home/css/**",
+			"/home/fonts/**",
+			"/home/js/**",
+			"/home/images/**",
+			"/system/**",
+			"/error",
+			"/cpacha/generate_cpacha",
+			"/photo/view",
+			"/upload/upload_photo"
+	);
+	//前台全局拦截器无需拦截的url
+	public static List<String> homeGlobalExcludePathPatterns = Arrays.asList(
+			"/admin/**",
+			"/home/index/**",
+			"/home/css/**",
+			"/home/fonts/**",
+			"/home/js/**",
+			"/home/images/**",
+			"/cpacha/generate_cpacha",
+			"/system/**",
+			"/error",
+			"/photo/view",
+			"/upload/upload_photo",
+			"/cpacha/generate_cpacha"
+	);
+}
