@@ -68,7 +68,7 @@ public class ScenicService {
 	 */
 	public PageBean<Scenic> findList(Scenic scenic,PageBean<Scenic> pageBean){
 		ExampleMatcher withMatcher = ExampleMatcher.matching().withMatcher("title", GenericPropertyMatchers.contains());
-		withMatcher = withMatcher.withIgnorePaths("status","price","viewNumber");
+		withMatcher = withMatcher.withIgnorePaths("status","price","viewNumber","rateNumber","rateScore");
 		Example<Scenic> example = Example.of(scenic, withMatcher);
 		Pageable pageable = PageRequest.of(pageBean.getCurrentPage()-1, pageBean.getPageSize());
 		Page<Scenic> findAll = scenicDao.findAll(example, pageable);
